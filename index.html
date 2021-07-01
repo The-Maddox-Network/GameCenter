@@ -1,0 +1,437 @@
+
+<style>
+    .gamecenter_page {
+    background-image: linear-gradient(to bottom right, rgb(0, 153, 255), rgb(251, 255, 0));
+    }
+    
+    
+    .dtarcade_page {
+    background-image: linear-gradient(to bottom right, rgb(1, 77, 7), rgb(0, 255, 13));
+    }
+
+    .time_waster_page {
+    background-image: linear-gradient(to bottom right, #c2c2c2, #c2c2c2);
+    }
+
+
+
+
+    
+    .gamecenter_game_logo {
+    margin: 10px;
+    border-radius: 75px;
+    padding: 0x;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(0, 0, 0) 
+    }
+
+
+
+
+    .centered_image {
+    margin: 10px;
+    border-radius: 30px;
+    padding: 0x;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    
+    .gamecenter_dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 100%;
+}
+
+.gamecenter_dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.gamecenter_dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.gamecenter_dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.gamecenter_dropdown-content a:hover {background-color: #ddd;}
+
+.gamecenter_dropdown:hover .gamecenter_dropdown-content {display: block;}
+
+.gamecenter_dropdown:hover .gamecenter_dropbtn {background-color: #3e8e41;}
+
+.gamecenter_menubar{
+    position: relative;
+  text-align: center;
+}
+.gamecenter_sort_button{
+    margin: 10px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width:17%;
+  cursor:pointer;
+
+}
+
+.gamecenter_sort_button:hover{
+    background-color: #3e8e41;
+
+}
+
+@media only screen and (max-width: 750px) {
+.gamecenter_menubar{
+    display: none;
+}
+.gamecenter_dropdown{
+    display: block;
+}}
+
+@media only screen and (min-width: 750px) {
+.gamecenter_menubar{
+    display: block;
+}
+.gamecenter_dropdown{
+    display: none;
+}}
+
+
+
+</style>
+    
+    
+    <script>
+    function showDTArcade() {
+        hideAll();
+       document.getElementById('dtarcade_page').style.display = "block";
+    }
+    function showGameCenter() {
+        hideAll();
+       document.getElementById('gamecenter_page').style.display = "block";
+    }
+    function showPopularGames() {
+        hideAll();
+       document.getElementById('popular_page').style.display = "block";
+    }
+    function showMobileGames() {
+        hideAll();
+       document.getElementById('mobile_page').style.display = "block";
+    }
+    function showTimeWaster() {
+        hideAll();
+       document.getElementById('time_waster_page').style.display = "block";
+    }
+    
+    function hideAll(){
+        document.getElementById('popular_page').style.display = "none";
+       document.getElementById('dtarcade_page').style.display = "none";
+       document.getElementById('gamecenter_page').style.display = "none";
+       document.getElementById('mobile_page').style.display = "none";
+       document.getElementById('time_waster_page').style.display = "none";
+    }
+    </script>
+    <div class="gamecenter_dropdown">
+        <button class="gamecenter_dropbtn" >Sort Games</button>
+        <div class="gamecenter_dropdown-content">
+          <a href="javascript:showGameCenter();">Show All</a>
+          <a href="javascript:showPopularGames();">Popular Games</a>
+          <a href="javascript:showMobileGames();">Mobile Games</a>
+          <a href="javascript:showTimeWaster();">Time Waster 3000</a>
+          <a href="javascript:showDTArcade();">DT Arcade Games</a>
+        </div>
+      </div>
+      <div class="gamecenter_menubar" align="center">
+        <button onclick="showGameCenter();" class="gamecenter_sort_button">Show All Games</button>
+        <button onclick="showPopularGames();" class="gamecenter_sort_button">Popular Games</button>
+        <button onclick="showMobileGames();" class="gamecenter_sort_button">Mobile Games</button>
+        <button onclick="showTimeWaster();" class="gamecenter_sort_button" style="font-family: Comic Sans MS, Comic Sans, cursive, sans-serif;">Time Waster 3000</button>
+        <button onclick="showDTArcade();" class="gamecenter_sort_button">DT Arcade Games</button>
+
+      </div>
+    
+    <div class="gamecenter_page" id="gamecenter_page">
+    <img src="/static/images/gamecenter/logo.png" alt="TMN Game Center logo" class="centered_image">
+    
+    <a href="/p/1806/koalas-to-the-max">
+        <img src="/static/images/gamecenter/koalas.jpg" class="gamecenter_game_logo" alt="Koalas to the max">
+    </a> 
+    
+    <a href="/p/441/this-is-sand">
+        <img src="/static/images/gamecenter/this_is_sand.jpeg" class="gamecenter_game_logo" alt="This is Sand">
+    </a>  
+    
+    <a href="/p/1724/this-is-sand">
+        <img src="/static/images/gamecenter/this_is_sand_dark.jpg" class="gamecenter_game_logo" alt="This is Sand">
+    </a> 
+    
+    
+    <a href="/p/1760/sand-particle-simulator">
+        <img src="/static/images/gamecenter/sand_particle_simulator.PNG" class="gamecenter_game_logo" alt="Sand Particle Simulator">
+    </a>   
+    
+    <a href="/p/638/paperio-2">
+        <img src="/static/images/gamecenter/paperio2.jpg" class="gamecenter_game_logo" alt="Paper.io 2">
+    </a>  
+    
+    <a href="/tetris">
+    <img src="/static/images/gamecenter/tetris.png" class="gamecenter_game_logo" alt="Tetris">
+    </a>
+    
+    <a href="/tetris-scores">
+    <img src="/static/images/gamecenter/Tetris_leaderboard.png" class="gamecenter_game_logo" alt="Tetris Leaderboard">
+    </a>
+    
+    <a href="/p/530/2048">
+    <img src="/static/images/gamecenter/2048.png" class="gamecenter_game_logo" alt="2048">
+    </a>
+    
+    
+    <a href="/p/1480/breakout">
+    <img src="/static/images/gamecenter/breakout.png" class="gamecenter_game_logo" alt="Breakout">
+    </a>
+    
+    
+    <a href="/bypass2/?cdURL=https://chromedino.com/">
+    <img src="/static/images/gamecenter/dino_game.jpg" class="gamecenter_game_logo" alt="Chrome Dino Game">
+    </a>
+    
+    <a href="/p/82/flappy-bird">
+    <img src="/static/images/gamecenter/flappy.jpg" class="gamecenter_game_logo" alt="Flappy Bird">
+    </a>
+    
+    <a href="/p/1104/fireboy-and-watergirl">
+    <img src="/static/images/gamecenter/fbwg.jpg" class="gamecenter_game_logo" alt="Fireboy and Watergirl">
+    </a>
+    
+    
+    <a href="/p/452/pac-man">
+    <img src="/static/images/gamecenter/pacman.png" class="gamecenter_game_logo" alt="Pacman">
+    </a>
+    
+    <a href="/p/1392/paperio-2-multiplayer">
+    <img src="/static/images/gamecenter/paperio.png" class="gamecenter_game_logo" alt="Paper.io Multiplayer">
+    </a>
+    
+    <a href="/p/1482/pong">
+    <img src="/static/images/gamecenter/pong.jpeg" class="gamecenter_game_logo" alt="Pong">
+    </a>
+    
+    <a href="/p/1485/Sprinter-Turtle">
+    <img src="/static/images/gamecenter/turtle.png" class="gamecenter_game_logo" alt="Sprinter Turtle">
+    </a>
+    
+    <a href="/p/1484/Typer">
+    <img src="/static/images/gamecenter/typer.png" class="gamecenter_game_logo" alt="Typer">
+    </a>
+    
+    <a href="/p/531/tower-game">
+    <img src="/static/images/gamecenter/towergame.png" class="gamecenter_game_logo" alt="Tower Game">
+    </a>
+    
+    <a href="/p/1481/Guess-the-image">
+    <img src="/static/images/gamecenter/Guess The Image.png" class="gamecenter_game_logo" alt="Guess The Image">
+    </a>
+    
+    <a href="/bypass/browse.php?u=http%3A%2F%2Fwww.brantsteele.net%2Fhungergames%2Freaping.php&amp;b=4&amp;f=norefer">
+    <img src="/static/images/gamecenter/hungergames.jpg" class="gamecenter_game_logo" alt="Hunger Games Simulator">
+    </a>
+    
+    <a href="/p/1829/bad-parkour-game">
+        <img src="/static/images/gamecenter/bad-parkour-game.jpg" class="gamecenter_game_logo" alt="Bad Parkour Game">
+    </a>  
+    
+    <a href="/p/1619/Crab-race">
+        <img src="/static/images/gamecenter/crabrace.png" class="gamecenter_game_logo" alt="Crab Race">
+    </a>  
+
+    <a href="/p/1922/long-doge-challenge">
+        <img src="/static/images/gamecenter/long-doge.png" class="gamecenter_game_logo" alt="Long Doge Challenge">
+    </a>
+
+    <a href="/p/1955/Flappy-2048">
+        <img src="/static/images/gamecenter/flappy-2048.png" class="gamecenter_game_logo" alt="Flappy 2048">
+    </a>
+
+    <a href="/p/1956/fun-text-effect">
+        <img src="/static/images/gamecenter/fun-text-effect.png" class="gamecenter_game_logo" alt="Fun Text Effect">
+    </a>
+
+    <a href="/p/1957/squishy-earth">
+        <img src="/static/images/gamecenter/squishy-earth.png" class="gamecenter_game_logo" alt="Squishy Earth">
+    </a>
+
+    <a href="/p/1958/infinite-horse">
+        <img src="/static/images/gamecenter/infinite-horse.png" class="gamecenter_game_logo" alt="Infinite Horse">
+    </a>
+
+    <a href="/p/1967/color-fade">
+        <img src="/static/images/gamecenter/color-fade.png" class="gamecenter_game_logo" alt="Color Fade">
+    </a>
+
+    <a href="/p/1968/pet-the-dog">
+        <img src="/static/images/gamecenter/pet-the-dog.png" class="gamecenter_game_logo" alt="PET THE DOG!!!!!!!!!">
+    </a>
+
+    <a href="/p/1969/Fidget Spinner">
+        <img src="/static/images/gamecenter/fidget-spinner.png" class="gamecenter_game_logo" alt="Fidget Spinner">
+    </a>
+
+    <a href="/p/1971/pixels-fighting">
+        <img src="/static/images/gamecenter/pixels-fighting.png" class="gamecenter_game_logo" alt="Pixels Fighting">
+    </a>
+
+    <a href="/p/1973/popcorn">
+        <img src="/static/images/gamecenter/popcorn.png" class="gamecenter_game_logo" alt="Popcorn">
+    </a>
+    
+    <a href="/p/1974/falling-guy">
+        <img src="/static/images/gamecenter/falling-guy.png" class="gamecenter_game_logo" alt="Falling Guy">
+    </a>
+
+    <a href="/p/1978/whats-my-starbucks-name">
+        <img src="/static/images/gamecenter/starbucks-name.png" class="gamecenter_game_logo" alt="Whats my Starbucks">
+    </a>
+
+    <a href="/p/1980/where-is-the-sloth">
+        <img src="/static/images/gamecenter/where-is-sloth.png" class="gamecenter_game_logo" alt="Where is the Sloth?">
+    </a>
+    </div>
+    
+
+    
+
+    
+    <div class="gamecenter_page" id="popular_page" style="display:none;">
+    <img src="/static/images/gamecenter/logo.png" alt="TMN Game Center logo" class="centered_image">
+
+    
+    <a href="/bypass/browse.php?u=http%3A%2F%2Fwww.brantsteele.net%2Fhungergames%2Freaping.php&amp;b=4&amp;f=norefer">
+        <img src="/static/images/gamecenter/hungergames.jpg" class="gamecenter_game_logo" alt="Hunger Games Simulator">
+        </a>
+    
+    <a href="/p/441/this-is-sand">
+    <img src="/static/images/gamecenter/this_is_sand.jpeg" class="gamecenter_game_logo" alt="This is sand">
+    </a>  
+    
+    <a href="/p/1724/this-is-sand">
+        <img src="/static/images/gamecenter/this_is_sand_dark.jpg" class="gamecenter_game_logo" alt="This is Sand">
+    </a> 
+    
+    <a href="/p/1806/koalas-to-the-max">
+        <img src="/static/images/gamecenter/koalas.jpg" class="gamecenter_game_logo" alt="Koalas to the max">
+    </a>    
+    
+    <a href="/tetris">
+        <img src="/static/images/gamecenter/tetris.png" class="gamecenter_game_logo" alt="Tetris">
+    </a>
+    </div>
+    
+    
+    
+    <div class="gamecenter_page" id="mobile_page" style="display:none;">
+        <img src="/static/images/gamecenter/logo.png" alt="TMN Game Center logo" class="centered_image">
+    
+        
+        <a href="/tetris">
+            <img src="/static/images/gamecenter/tetris.png" class="gamecenter_game_logo" alt="Tetris">
+        </a>
+    
+    
+    
+    </div>
+    
+    <div class="dtarcade_page" id="dtarcade_page" style="display:none;">
+        <img src="/static/images/gamecenter/dtarcade-logo.png" alt="DT Arcade Logo" class="centered_image">
+        
+        <a href="/p/1829/bad-parkour-game">
+            <img src="/static/images/gamecenter/bad-parkour-game.jpg" class="gamecenter_game_logo" alt="Bad Parkour Game">
+        </a>  
+        
+        <a href="/p/1619/Crab-race">
+            <img src="/static/images/gamecenter/crabrace.png" class="gamecenter_game_logo" alt="Crab Race">
+        </a> 
+    
+    </div>
+
+    <div class="time_waster_page" id="time_waster_page" style="display:none;">
+        <img src="/static/images/gamecenter/time-waster-logo.png" alt="Time Waster 3000 Logo" class="centered_image">
+        <h1 style="font-family: Comic Sans MS, Comic Sans, cursive, sans-serif;">Do you have time to kill and dont know what to do? Then welcome to the Time Waster 3000! A place filled with pointless things designed to waste your time!</h1>
+        
+        <a href="/p/1806/koalas-to-the-max">
+            <img src="/static/images/gamecenter/koalas.jpg" class="gamecenter_game_logo" alt="Koalas to the max">
+        </a> 
+
+        <a href="/p/1922/long-doge-challenge">
+            <img src="/static/images/gamecenter/long-doge.png" class="gamecenter_game_logo" alt="Long Doge Challenge">
+        </a>
+
+        <a href="/p/1955/Flappy-2048">
+            <img src="/static/images/gamecenter/flappy-2048.png" class="gamecenter_game_logo" alt="Flappy 2048">
+        </a>
+
+        <a href="/p/1956/fun-text-effect">
+            <img src="/static/images/gamecenter/fun-text-effect.png" class="gamecenter_game_logo" alt="Fun Text Effect">
+        </a>
+
+        <a href="/p/1957/squishy-earth">
+            <img src="/static/images/gamecenter/squishy-earth.png" class="gamecenter_game_logo" alt="Squishy Earth">
+        </a>
+
+        <a href="/p/1958/infinite-horse">
+            <img src="/static/images/gamecenter/infinite-horse.png" class="gamecenter_game_logo" alt="Infinite Horse">
+        </a>
+
+        <a href="/p/1967/color-fade">
+            <img src="/static/images/gamecenter/color-fade.png" class="gamecenter_game_logo" alt="Color Fade">
+        </a>
+
+        <a href="/p/1968/pet-the-dog">
+            <img src="/static/images/gamecenter/pet-the-dog.png" class="gamecenter_game_logo" alt="PET THE DOG!!!!!!!!!">
+        </a>
+
+        <a href="/p/1969/Fidget Spinner">
+            <img src="/static/images/gamecenter/fidget-spinner.png" class="gamecenter_game_logo" alt="Fidget Spinner">
+        </a>
+
+        <a href="/p/1971/pixels-fighting">
+            <img src="/static/images/gamecenter/pixels-fighting.png" class="gamecenter_game_logo" alt="Pixels Fighting">
+        </a>
+
+        <a href="/p/1973/popcorn">
+            <img src="/static/images/gamecenter/popcorn.png" class="gamecenter_game_logo" alt="Popcorn">
+        </a>
+        
+        <a href="/p/1974/falling-guy">
+            <img src="/static/images/gamecenter/falling-guy.png" class="gamecenter_game_logo" alt="Falling Guy">
+        </a>
+
+        <a href="/p/1978/whats-my-starbucks-name">
+            <img src="/static/images/gamecenter/starbucks-name.png" class="gamecenter_game_logo" alt="Whats my Starbucks">
+        </a>
+
+        <a href="/p/1980/where-is-the-sloth">
+            <img src="/static/images/gamecenter/where-is-sloth.png" class="gamecenter_game_logo" alt="Where is the Sloth?">
+        </a>
+        
+    
+    </div>
